@@ -245,6 +245,7 @@ const Landing = ({navigation}) => {
             <Dropdown
               onItemSelect={(item) => {
                 dispatch(Actions.selectState(item));
+                dispatch(Actions.selectDistrict({}));
                 loadDistricts(item);
               }}
               items={state?.states ?? []}
